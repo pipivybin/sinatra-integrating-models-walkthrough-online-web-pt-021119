@@ -8,7 +8,7 @@ class App < Sinatra::Base
 
   post '/' do
     i = params[:user_text]
-    @analyzed_text = TextAnalyzer.new()
+    @analyzed_text = TextAnalyzer.new(i)
     erb :results
   end
 end
